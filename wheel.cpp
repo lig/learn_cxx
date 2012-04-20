@@ -2,7 +2,7 @@
 
 int main() {
 	cout << "The wheel is spinning\n";
-	for (int i = 0; i < 10; ++i) {
+	while (1) {
 		cout << "\tand spinning\n";
 	}
 	return 0;
