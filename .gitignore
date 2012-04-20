@@ -2,6 +2,9 @@
 .*
 *~
 
+# But not special files
+!.gitignore
+
 # Compiled Object files
 *.slo
 *.lo
@@ -15,5 +18,5 @@
 *.la
 *.a
 
-# But not special files
-!.gitignore
+# Special folders
+/Debug
