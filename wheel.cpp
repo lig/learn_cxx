@@ -9,8 +9,8 @@ int main() {
 
 	cout << "The wheel is spinning\n";
 	for (int i = 1; i <= num; ++i) {
-		cout << "\tand spinning (" << i << ")\n";
+		cout << "\t" << "and spinning (" << i << ")\n";
 	}
-	return 0;
 
+	return 0;
 }
