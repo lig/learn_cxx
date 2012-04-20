@@ -1,10 +1,16 @@
 #include "std_lib_facilities.h"
 
+
 int main() {
-	int i=0;
+
+	cout << "Input the number of times to spin the wheel\n";
+	int num;
+	cin >> num;
+
 	cout << "The wheel is spinning\n";
-	while (1) {
-		cout << "\tand spinning (" << ++i << ")\n";
+	for (int i = 1; i <= num; ++i) {
+		cout << "\tand spinning (" << i << ")\n";
 	}
 	return 0;
+
 }
