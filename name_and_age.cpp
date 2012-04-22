@@ -5,6 +5,8 @@ int main() {
 	string first_name = "???";
 	double age = -1;
 	cin >> first_name >> age;
-	age *= 12;
-	cout << "Hello, " << first_name << " (age " << age << "m)\n";
+	int months = age * 12;
+	int years = months / 12;
+	months -= years * 12;
+	cout << "Hello, " << first_name << " (age " << years << "y " << months << "m)\n";
 }
