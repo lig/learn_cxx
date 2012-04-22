@@ -3,7 +3,8 @@
 int main() {
 	cout << "Please enter you name and age\n";
 	string first_name = "???";
-	int age = -1;
+	double age = -1;
 	cin >> first_name >> age;
-	cout << "Hello, " << first_name << " (age " << age << ")\n";
+	age *= 12;
+	cout << "Hello, " << first_name << " (age " << age << "m)\n";
 }
