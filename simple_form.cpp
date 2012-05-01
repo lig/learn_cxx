@@ -1,15 +1,27 @@
 #include "std_lib_facilities.h"
 
+
 int main() {
+
 	cout << "Please type recipient name than press enter:\n";
 	string first_name;
 	cin >> first_name;
+
 	cout << "Please type friend name than press enter:\n";
 	string friend_name;
 	cin >> friend_name;
+
 	cout << "Please specify " << friend_name << "'s sex (type 'm' if mail or 'f' if female):\n";
 	char friend_sex=0;
 	cin >> friend_sex;
+
+	cout << "Please enter recipient age:\n";
+	int age = -1;
+	cin >> age;
+	if (age <= 0 or age > 110) {
+		simple_error("Are you kidding?");
+	}
+
 	cout << "Dear " << first_name << ",\n";
 	cout << "\n";
 	cout << "Whazup?\n";
