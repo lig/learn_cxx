@@ -7,7 +7,14 @@ int main() {
 	while (cin >> num) {
 		nums.push_back(num);
 	}
-	for (int i = 0; i < nums.size(); ++i) {
-		cout << "Number " << i+1 << ": " << nums[i] << endl;
+	if (nums.size() == 0) {
+		simple_error("Nothing to do.");
 	}
+	int min = nums[0];
+	for (int i = 1; i < nums.size(); ++i) {
+		if (nums[i] < min) {
+			min = nums[i];
+		}
+	}
+	cout << "Minimal number is: " << min << endl;
 }
