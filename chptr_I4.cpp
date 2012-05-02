@@ -1,5 +1,7 @@
 #include "std_lib_facilities.h"
 
+const double precision = 1.0/100;
+
 int main() {
 	vector<double> nums;
 	double num;
@@ -11,8 +13,9 @@ int main() {
 		simple_error("Nothing to do.");
 	}
 	for (int i = 1; i < nums.size(); ++i) {
-		if (nums[i] == nums[i-1]) {
-			cout << nums[i] << " is equal with previous.\n";
+		if (abs(nums[i] - nums[i-1]) < precision) {
+			cout << nums[i] << " is equal to previous number " << nums[i-1];
+			cout << " (precision is " << precision << ").\n";
 		}
 	}
 }
