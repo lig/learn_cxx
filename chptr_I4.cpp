@@ -1,8 +1,8 @@
 #include "std_lib_facilities.h"
 
 int main() {
-	vector<int> nums;
-	int num;
+	vector<double> nums;
+	double num;
 	cout << "Enter several numbers:\n";
 	while (cin >> num) {
 		nums.push_back(num);
