@@ -7,4 +7,7 @@ int main() {
 	while (cin >> num) {
 		nums.push_back(num);
 	}
+	for (int i = 0; i < nums.size(); ++i) {
+		cout << "Number " << i+1 << ": " << nums[i] << endl;
+	}
 }
