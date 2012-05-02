@@ -10,11 +10,9 @@ int main() {
 	if (nums.size() == 0) {
 		simple_error("Nothing to do.");
 	}
-	int min = nums[0];
 	for (int i = 1; i < nums.size(); ++i) {
-		if (nums[i] < min) {
-			min = nums[i];
+		if (nums[i] == nums[i-1]) {
+			cout << nums[i] << " is equal with previous.\n";
 		}
 	}
-	cout << "Minimal number is: " << min << endl;
 }
