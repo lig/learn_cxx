@@ -10,7 +10,7 @@ int main() {
 	// average temp calculation
 	double sum = 0;
 	for (int i = 0; i < temps.size(); ++i) {
-		sum += temps;
+		sum += temps[i];
 	}
 	cout << "Average temp is: " << sum/temps.size() << endl;
 
