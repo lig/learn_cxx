@@ -16,12 +16,6 @@ int main() {
 
 	// median temp calculation
 	sort(temps.begin(), temps.end());
-	double median;
 	int middle = temps.size() / 2;
-	if (temps.size() % 2) {
-		median = temps[middle];
-	} else {
-		median = (temps[middle] + temps[middle-1]) / 2;
-	}
-	cout << "Median temp is: " << median << endl;
+	cout << "Median temp is: " << ((temps.size() % 2) ? temps[middle] : (temps[middle] + temps[middle-1]) / 2) << endl;
 }
