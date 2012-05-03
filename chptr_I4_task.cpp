@@ -11,6 +11,7 @@ int main() {
 	double max;
 	double sum = 0;
 	int count = 0;
+	vector<double> lengths;
 	bool is_first=true;
 	cout << "Enter several numbers (possible units are: 'cm', 'in', 'ft', 'm'):\n";
 	while (cin >> num) {
@@ -27,6 +28,7 @@ int main() {
 			// pass
 			continue;
 		}
+		lengths.push_back(num);
 		if (!is_first) {
 			if (num < min) {
 				min = num;
@@ -46,4 +48,9 @@ int main() {
 	cout << "The highest length in meters is: " << max << "m" << endl;
 	cout << "The summary length in meters is: " << sum << "m" << endl;
 	cout << "The number of entered lengths is: " << count << endl;
+	cout << "Lengths was:";
+	for (int i = 0; i < lengths.size(); ++i) {
+		cout << " " << lengths[i] << "m";
+	}
+	cout << endl;
 }
