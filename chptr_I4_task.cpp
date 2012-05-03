@@ -48,6 +48,7 @@ int main() {
 	cout << "The highest length in meters is: " << max << "m" << endl;
 	cout << "The summary length in meters is: " << sum << "m" << endl;
 	cout << "The number of entered lengths is: " << count << endl;
+	sort(lengths.begin(), lengths.end());
 	cout << "Lengths was:";
 	for (int i = 0; i < lengths.size(); ++i) {
 		cout << " " << lengths[i] << "m";
