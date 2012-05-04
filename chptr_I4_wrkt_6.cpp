@@ -15,11 +15,19 @@ int main () {
 	num_str.push_back("eight");
 	num_str.push_back("nine");
 
-	int num = -1;
-	cout << "Enter digit: ";
-	cin >> num;
-	if (!(num >= 0 and num <= 9)) {
-		throw runtime_error("Incorrect digit");
+	int digit = -1;
+	string word = "";
+	cout << "Enter digit as word: ";
+	cin >> word;
+
+	for (int i = 0; i < num_str.size(); ++i) {
+		if (num_str[i] == word) {
+			digit = i;
+			break;
+		}
 	}
-	cout << num_str[num] << endl;
+	if (digit == -1) {
+		throw runtime_error("Incorrect word");
+	}
+	cout << digit << endl;
 }
