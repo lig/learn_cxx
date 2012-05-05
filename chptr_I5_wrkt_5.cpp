@@ -17,8 +17,23 @@ double c2k(double c) {
 }
 
 int main() {
-	double k = 0;
-	cin >> k;
-	double c = k2c(k);
-	cout << c << endl;
+	double f_val = 0;
+	double t_val = 0;
+	char f_scale = ' ';
+	char t_scale = ' ';
+	cin >> f_val >> f_scale;
+	switch (f_scale) {
+		case 'C':
+			t_val = c2k(f_val);
+			t_scale = 'K';
+			break;
+		case 'K':
+			t_val = k2c(f_val);
+			t_scale = 'C';
+			break;
+		default:
+			throw runtime_error("Unknown scale");
+			break;
+	}
+	cout << t_val << t_scale << endl;
 }
