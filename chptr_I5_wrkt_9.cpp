@@ -25,4 +25,16 @@ int main() {
 		sum += numbers[i];
 	}
 	cout << "The sum of the first " << count << " numbers is " << sum << endl;
+
+	vector<double> differences;
+	for (int i = 1; i < count; ++i) {
+		differences.push_back(numbers[i] - numbers[i-1]);
+	}
+	if (differences.size()) {
+		cout << "Differences are:";
+		for (int i = 0; i < differences.size(); ++i) {
+			cout << " " << differences[i];
+		}
+		cout << endl;
+	}
 }
