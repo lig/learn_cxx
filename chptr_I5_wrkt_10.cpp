@@ -1,8 +1,8 @@
 #include "std_lib_facilities.h"
 
 int main() {
-	int first = 0;
-	int second = 1;
+	long int first = 0;
+	long int second = 1;
 	bool good = true;
 	cout << first << endl;
 	while (good) {
