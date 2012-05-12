@@ -9,7 +9,7 @@ int main() {
 		cout << second << endl;
 		second += first;
 		first = second - first;
-		if (second < 0) {
+		if (second < 0) {  // overflow protection
 			good = false;
 		}
 	}
