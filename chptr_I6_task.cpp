@@ -185,13 +185,14 @@ try
 	cout << "Welcome!\n";
 	cout << "Feel free to enter expressions below.\n";
 	cout << "End expressions with \"=\". Exit with \"x\".\n";
-	cout << "\n";
+	cout << "$:";
     while (cin) {
         Token t = ts.get();
 
         if (t.kind == 'x') break; // 'x' for quit
         if (t.kind == '=') {        // '=' for "print now"
         	cout << "=" << val << '\n';
+        	cout << "$:";
         }
         else
             ts.putback(t);
