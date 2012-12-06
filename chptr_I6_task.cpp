@@ -182,6 +182,10 @@ double val = 0;
 int main()
 try
 {
+	cout << "Welcome!\n";
+	cout << "Feel free to enter expressions below.\n";
+	cout << "End expressions with \"=\". Exit with \"x\".\n";
+	cout << "\n";
     while (cin) {
         Token t = ts.get();
 
