@@ -75,7 +75,7 @@ Token Token_stream::get()
     cin >> ch;    // note that >> skips whitespace (space, newline, tab, etc.)
 
     switch (ch) {
-    case ';':    // for "print"
+    case '=':    // for "print"
     case 'x':    // for "quit"
     case '(': case ')': case '+': case '-': case '*': case '/':
         return Token(ch);        // let each character represent itself
@@ -186,7 +186,7 @@ try
         Token t = ts.get();
 
         if (t.kind == 'x') break; // 'x' for quit
-        if (t.kind == ';') {        // ';' for "print now"
+        if (t.kind == '=') {        // '=' for "print now"
         	cout << "=" << val << '\n';
         }
         else
