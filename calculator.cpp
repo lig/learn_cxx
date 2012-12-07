@@ -70,6 +70,7 @@ Token Token_stream::get() {
 
 	switch (ch) {
 	case '=':    // for "print"
+	case ';':    // for "print"
 	case 'x':    // for "quit"
 	case '(':
 	case ')':
@@ -243,7 +244,7 @@ int main() {
 
 			if (t.kind == 'x')
 				break; // 'x' for quit
-			if (t.kind == '=') {        // '=' for "print now"
+			if (t.kind == '=' || t.kind == ';') {        // '=' for "print now"
 				cout << "\r=" << val << '\n';
 				cout << PS;
 			} else
