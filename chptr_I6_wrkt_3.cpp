@@ -118,7 +118,7 @@ double expression();    // declaration so that primary() can call expression()
 
 //------------------------------------------------------------------------------
 
-// deal with numbers and parentheses
+// deal with numbers, parentheses and !
 double primary() {
 	Token t = ts.get();
 	switch (t.kind) {
@@ -168,7 +168,6 @@ double factorial(double n) {
 }
 double factorial_or_primary() {
 	double number = primary();
-	return number;
 	Token t = ts.get();
 
 	switch (t.kind) {
@@ -184,17 +183,17 @@ double factorial_or_primary() {
 
 // deal with *, /, and %
 double term() {
-	double left = primary();
+	double left = factorial_or_primary();
 	Token t = ts.get();        // get the next token from token stream
 
 	while (true) {
 		switch (t.kind) {
 		case '*':
-			left *= primary();
+			left *= factorial_or_primary();
 			t = ts.get();
 			break;
 		case '/': {
-			double d = primary();
+			double d = factorial_or_primary();
 			if (d == 0)
 				error("divide by zero");
 			left /= d;
